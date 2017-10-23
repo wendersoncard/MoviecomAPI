@@ -1,0 +1,170 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: #f4f4f4;
+	font-family: "Arial";
+}
+
+.clearAll{
+	width: 100%;
+	clear: both;
+	height: 1px;
+}
+
+#sideMenu{
+	float: left;
+	width: 250px;
+	background: #fff;
+	min-height: 100px;
+	margin-left: 20px;
+	margin-top: 50px;
+}
+
+#body{
+	float: left;
+	width: 800px;
+	min-height: 300px;
+	background: #fff;
+	margin-top: 50px;
+	box-shadow: 2px 2px 2px 2px #adadad;
+	margin-left: 50px;
+	padding: 40px 15px;
+	border-radius: 2px;
+	/*color: #fff;*/
+}
+
+#body img{
+    float: left;
+    margin-right: 10px;
+}
+
+#body p{
+	font-size: 15px;
+}
+
+#body h1{
+	margin: 0 0 20px 0;
+	font-weight: normal;
+}
+
+#body section{
+	background: #eaeaea;
+	padding: 10px 20px;
+	overflow: hidden;
+}
+
+#body .methodUrl{
+	color: #333;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+#body .methodUrl div{
+	float: left;
+	font-size: 13px;
+	padding: 10px 20px;
+}
+
+#body .methodUrl div:first-child{
+    width: 30px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #ffcb08;
+    border: solid 1px #ecbd07;
+    border-right: none;
+}
+
+#body .methodUrl div:last-child{
+	background: #000000;
+	color: #fff;
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: solid 1px #000;
+    border-left: none;
+}
+
+#body .table{
+	width: 510px;
+	border: solid 1px #b3b2b2;
+	border-bottom: none;
+}
+
+#body .table .tableHeader,
+#body .table .tableBody,
+#body .table .tr{
+	width: 510px;
+	float: left;
+	clear: both;
+}
+
+#body .table .tr{
+	border-bottom: solid 1px #b3b2b2;	
+}
+
+#body .table label{
+	margin-right: 10px;
+	width: 150px;
+	display: table-cell;
+	padding: 6px 10px;
+}
+
+#body .table label.center{
+	text-align: center;
+}
+
+#body .tableHeader{
+	background: #000;
+	color: #fff;
+}
+
+#body .table .tableBody label{
+	color: #333;
+    background: #d0d0d0;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#body .table font{
+	background: #b9b9b9;
+    padding: 2px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#body div.code{
+	background: #000;
+	overflow: hidden;
+	padding: 30px 40px;
+}
+
+#body div.code span{
+	color: #fff;
+	float: left;
+}
+
+#body div.code span.comment{
+	font-style: italic;
+    color: #989898;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#body div.code span.name{
+    clear: left;
+    margin-left: 40px;
+    font-style: italic;
+    color: #ffcb08;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+#body div.code span.choma{
+	clear: both;
+}
+
+#body div.code span.value{
+	margin-left: 15px;
+	color: #ffffff;
+	font-size: 13px;
+}
