@@ -135,7 +135,7 @@ body{
 }
 
 #body div.code{
-	background: #000;
+	background: #222;
 	overflow: hidden;
 	padding: 30px 40px;
 }
@@ -156,7 +156,7 @@ body{
     clear: left;
     margin-left: 40px;
     font-style: italic;
-    color: #ffcb08;
+    color: #bd512f;
     font-size: 14px;
     margin-bottom: 3px;
 }
@@ -167,7 +167,7 @@ body{
 
 #body div.code span.value{
 	margin-left: 15px;
-	color: #ffffff;
+	color: #ffcb08;
 	font-size: 13px;
 	width: 500px;
 }
@@ -208,4 +208,8 @@ body{
 #body div.code span.name.status,
 #body div.code span.choma.status{
 	margin-left: 15px;
+}
+
+.white{
+	color: #fff !important;
 }

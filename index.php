@@ -1,5 +1,11 @@
 <?php
 
+header('Content-Type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
+//header("Access-Control-Request-Headers", 'user_token');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Origin, user_token");
+
 $db_host  = "107.170.68.250";
 $db_name  = "wordpress";
 $db_id    = "moviecom";
@@ -68,11 +74,10 @@ function retornaJson($programacao){
 
 /*fim functions*/
 
-header('Content-Type: application/json; charset=utf-8');
-
 $programacao = array();
 $programacao['status'] = "";
 $programacao['data'] = array();
+
 
 //parâmetros válidos
 if((!isset($_GET['praca']) || trim($_GET['praca']) == "") || (!isset($_GET['data_fim']) || trim($_GET['data_fim']) == "") || (!isset($_GET['data_ini']) || trim($_GET['data_ini']) == "") ){
@@ -105,6 +110,8 @@ else if(!verificaRegistraTokenUsuario($cn, getallheaders()['user_token'])){
   return false;
 }
 else{
+  
+
     $praca = anti_injection($_GET['praca']);
     $dataIni = anti_injection($_GET['data_ini']);
     $dataFim = anti_injection($_GET['data_fim']);
@@ -139,7 +146,7 @@ else{
       while($row = mysqli_fetch_assoc($result_filmes)){ //while filmes
         $nome_filme = $row['IDFILMEPAI_DESC'];
 
-        $query = "SELECT * FROM sys_programacao WHERE CODPRACA = '$praca' AND DATASESSAO > '$dataIni 00:00:00' AND DATASESSAO < '$dataFim 00:00:00' AND IDFILMEPAI_DESC = '$nome_filme' ORDER BY IDFILMEPAI_DESC, DATASESSAO";
+        $query = "SELECT * FROM wordpress.sys_programacao WHERE CODPRACA = '$praca' AND DATASESSAO > '$dataIni 00:00:00' AND DATASESSAO < '$dataFim 00:00:00' AND IDFILMEPAI_DESC = '$nome_filme' ORDER BY IDFILMEPAI_DESC, DATASESSAO";
 
         $result = mysqli_query($cn, $query);
 
@@ -173,10 +180,9 @@ else{
           }
 
           //dia / hora
-          $data = split(' ', $row1['DATASESSAO']);
+          $data = explode(' ', $row1['DATASESSAO']);
           $dia = $data[0];
           $hora = $data[1];
-
 
           $horarios[] = array(
               'sessao' => array(
@@ -242,6 +248,8 @@ else{
         );
       } //fim while filmes
       $programacao['status'] = "Success";
+
+
 
       registraLogRequisicao($cn, $token, $praca, $dataIni, $dataFim, "Success");
 
