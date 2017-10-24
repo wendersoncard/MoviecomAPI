@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de código</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+      $.ajax({
+        headers: {
+          'user_token': 'código_do_token'
+        },
+        type: 'GET',
+        dataType: "json",
+        url : 'http://moviecom.com.br/moviecomAPI',
+        data: {
+          'praca': 'TAU',
+          'data_ini': '2017-10-06',
+          'data_fim': '2017-10-07'
+        },
+        success : function(response){
+          console.log(response); //resposta completa da API Moviecom
+
+          if(response.status == "Success"){ // status Success
+            $(response.data[0].filmes).each(function(i, el){ //percorrer todos os filmes retornados
+
+              var filme = el.filme;
+              console.log(filme); //exibe filme;
+
+              var titulo = filme.titulo; //captura titulo do filme
+
+              var horarios = [];
+              horarios = filme.horarios; //captura horários das sessões do filme;
+              console.log(horarios); //exibe array de horários do filme
+            })
+          }
+          else{ //status Error
+            console.log(response.data[0]); //mensagem de erro retornado
+          }
+          //
+        }
+      }).fail(function(error){ //erro de requisição HTTP
+        console.log(error);
+        //tratamento do erro
+      })
+
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

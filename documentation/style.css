@@ -40,6 +40,7 @@ body{
 
 #body p{
 	font-size: 15px;
+	margin-top: 20px;
 }
 
 #body h1{
@@ -87,6 +88,7 @@ body{
 	width: 510px;
 	border: solid 1px #b3b2b2;
 	border-bottom: none;
+	overflow: hidden;
 }
 
 #body .table .tableHeader,
@@ -167,4 +169,43 @@ body{
 	margin-left: 15px;
 	color: #ffffff;
 	font-size: 13px;
+	width: 500px;
+}
+
+#body div.code span.value.minor{
+	width: 200px;
+}
+
+#body div.code span.sec{
+	margin-left: 60px;
+}
+
+#body div.code span.thir{
+	margin-left: 80px;
+}
+
+#body div.code span.four{
+	margin-left: 105px;
+}
+
+#body div.code span.fif{
+	margin-left: 125px;
+}
+
+#body div.code span.six{
+	margin-left: 155px;
+}
+
+#body div.code span.choma.name{
+	clear: left;
+    margin-left: 40px;
+    font-style: normal;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+#body div.code span.name.status,
+#body div.code span.choma.status{
+	margin-left: 15px;
 }
