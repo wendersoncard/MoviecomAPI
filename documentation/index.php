@@ -3,30 +3,70 @@
 <head>
   <title>Documentação Moviecom API</title>
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $(window).scroll(function(e){
+        var windowPos = $(this).scrollTop();
+
+        $('h2').each(function(i, el){
+          var elPos = $(el).offset().top;
+
+          if(windowPos > elPos-50){
+            $('#sideMenu ul li a').removeClass('active');
+            $('#sideMenu ul li a[h2="'+$(el).attr('id')+'"]').addClass('active');
+          }
+        })
+      });
+
+      $(window).trigger('scroll');
+
+      $('#sideMenu a').click(function(e){
+        dis = this
+        $('html, body').animate({
+          scrollTop: $("#"+$(dis).attr('h2')).offset().top
+        }, 200);
+      })
+    })
+  </script>
 </head>
 <body>
-  <div id="sideMenu"></div>
+  
+  <div id="sideMenu">
+      <div id="logoMenu"><img src="logo.png"></div>
+      <ul>
+        <li><a h2="introducao">Introdução</a></li>
+        <li><a h2="token">Token de autenticação</a></li>
+        <li><a h2="params">Parâmetros</a></li>
+        <li><a h2="req">Requisição</a></li>
+        <li><a h2="resp">Resposta</a></li>
+        <li><a h2="erros">Erros</a></li>
+        <li><a h2="code">Exemplo de código</a></li>
+      </ul>
+  </div>
+  
   <div id="body">
     <img src="logo.png" style="margin-top: -10px;"> <h1>Documentação Moviecom API</h1>
 
     <div class="clearAll"></div>
 
     <section>
-      <h2>Introdução</h2>
+      <h2 id="introducao">Introdução</h2>
       <p>
         O objetivo desta documentação é orientar o desenvolvedor sobre a interação com a API Moviecom, descrevendo as etapas de integração, mostrando exemplos de envio e retorno, e orientando a autenticação dos serviços.
       </p>
     </section>
 
     <section>
-      <h2>Token de autenticação</h2>
+      <h2 id="token">Token de autenticação</h2>
       <p>
         O Token de autenticação é provido pela Tripé Criação para o desenvolvedor do sistema. Para obte-lo favor entrar em contato via e-mail com contato@tripecriacao.com.br
       </p>
     </section>
 
     <section>
-      <h2>Parâmetros</h2>
+      <h2 id="params">Parâmetros</h2>
 
       <div class="methodUrl">
         <div>GET</div>
@@ -87,7 +127,7 @@
     <div class="clearAll"></div>
 
     <section>
-      <h2>Exemplo de requisições</h2>
+      <h2 id="req">Exemplo de requisições</h2>
       <div class="code">
         <span class="comment">//GET http://Moviecom.com.br/moviecomAPI/</span>
         <span class="choma">{</span>
@@ -99,7 +139,7 @@
     </section>
 
     <section>
-      <h2>Exemplo de resposta</h2>
+      <h2 id="resp">Exemplo de resposta</h2>
       <div class="code">
         <span class="comment">//success</span>
         <span class="choma">{</span>
@@ -152,7 +192,7 @@
       </div>
     </section>
     <section>
-      <h2>Erros</h2>
+      <h2 id="erros">Erros</h2>
 
       <p>Quando não for enviado um dos três parâmetros obrigatórios, a API retornará o erro a seguir:</p>
       <div class="code">
@@ -212,7 +252,7 @@
     </section>
 
     <section>
-      <h2>Exemplo de requisição via Jquery Ajax:</h2>
+      <h2 id="code">Exemplo de requisição via Jquery Ajax:</h2>
       <img src="exemplo.png" style="width: 100%;">
     </section>
   </div>

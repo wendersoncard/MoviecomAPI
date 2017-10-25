@@ -18,6 +18,41 @@ body{
 	min-height: 100px;
 	margin-left: 20px;
 	margin-top: 50px;
+	position: fixed;
+	border: solid 1px #1c2f63;
+}
+
+#sideMenu #logoMenu img{
+	width: auto;
+	display: block;
+	margin: 0 auto 30px;
+}
+
+#sideMenu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#sideMenu ul li{
+	width: 100%;
+}
+
+#sideMenu ul li a{
+	background: #fff;
+	border-top: solid 1px #1c2f63;
+	display: block;
+	padding: 10px 15px;
+	color: #1f387a;
+	text-decoration: none;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+#sideMenu ul li a:hover,
+#sideMenu ul li a.active{
+	background: #1c2f63;
+	color: #fff;
 }
 
 #body{
@@ -27,7 +62,7 @@ body{
 	background: #fff;
 	margin-top: 50px;
 	box-shadow: 2px 2px 2px 2px #adadad;
-	margin-left: 50px;
+	margin-left: 320px;
 	padding: 40px 15px;
 	border-radius: 2px;
 	/*color: #fff;*/
