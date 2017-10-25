@@ -70,9 +70,10 @@ body{
     width: 30px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    background: #ffcb08;
-    border: solid 1px #ecbd07;
+    background: #1f387a;
+    border: solid 1px #1c2f63;
     border-right: none;
+    color: #fff;
 }
 
 #body .methodUrl div:last-child{

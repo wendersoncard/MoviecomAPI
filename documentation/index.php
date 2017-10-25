@@ -7,7 +7,7 @@
 <body>
   <div id="sideMenu"></div>
   <div id="body">
-    <img src="logo.png" style="margin-top: -5px;"> <h1>- Documentação Moviecom API</h1>
+    <img src="logo.png" style="margin-top: -10px;"> <h1>Documentação Moviecom API</h1>
 
     <div class="clearAll"></div>
 
@@ -154,7 +154,7 @@
     <section>
       <h2>Erros</h2>
 
-      <p>Quando não for enviado um dos três parâmetors obrigatórios, a API retornará o erro a seguir:</p>
+      <p>Quando não for enviado um dos três parâmetros obrigatórios, a API retornará o erro a seguir:</p>
       <div class="code">
         <span class="comment">//error</span>
         <span class="choma">{</span>
