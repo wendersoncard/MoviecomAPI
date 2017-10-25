@@ -8,7 +8,12 @@ body{
 .clearAll{
 	width: 100%;
 	clear: both;
-	height: 1px;
+}
+
+a#lista{
+	color: #1c2f63;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #sideMenu{
@@ -120,42 +125,42 @@ body{
     border-left: none;
 }
 
-#body .table{
+.table{
 	width: 510px;
 	border: solid 1px #b3b2b2;
 	border-bottom: none;
 	overflow: hidden;
 }
 
-#body .table .tableHeader,
-#body .table .tableBody,
-#body .table .tr{
+.table .tableHeader,
+.table .tableBody,
+.table .tr{
 	width: 510px;
 	float: left;
 	clear: both;
 }
 
-#body .table .tr{
+.table .tr{
 	border-bottom: solid 1px #b3b2b2;	
 }
 
-#body .table label{
+.table label{
 	margin-right: 10px;
 	width: 150px;
 	display: table-cell;
 	padding: 6px 10px;
 }
 
-#body .table label.center{
+.table label.center{
 	text-align: center;
 }
 
-#body .tableHeader{
+.tableHeader{
 	background: #000;
 	color: #fff;
 }
 
-#body .table .tableBody label{
+.table .tableBody label{
 	color: #333;
     background: #d0d0d0;
     vertical-align: middle;
@@ -163,7 +168,7 @@ body{
     line-height: 21px;
 }
 
-#body .table font{
+.table font{
 	background: #b9b9b9;
     padding: 2px;
     font-style: italic;

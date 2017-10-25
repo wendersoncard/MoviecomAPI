@@ -39,6 +39,7 @@
         <li><a h2="introducao">Introdução</a></li>
         <li><a h2="token">Token de autenticação</a></li>
         <li><a h2="params">Parâmetros</a></li>
+        <li><a h2="lista">Lista de cinemas</a></li>
         <li><a h2="req">Requisição</a></li>
         <li><a h2="resp">Resposta</a></li>
         <li><a h2="erros">Erros</a></li>
@@ -122,6 +123,132 @@
 
         </div>
       </div>
+    </section>
+
+    <div class="clearAll"></div>
+
+    <section>
+      <h2 id="lista">Lista de cinemas</h2>
+      <div class="table" style="width: 265px;">
+      <div class="tableHeader">
+        <div class="tr">
+          <label>Cinema</label>
+          <label>Código</label>
+        </div>
+      </div>
+      <div class="tableBody">
+        <div class="tr">
+          <label>Aparecida de Goiânia</label>
+          <label>MAG</label>
+        </div>
+
+        <div class="tr">
+          <label>Araraquara</label>
+          <label>AR2</label>
+        </div>
+        
+        <div class="tr">
+          <label>Belém Castanheira</label>
+          <label>MCS</label>
+        </div>
+        
+        <div class="tr">
+          <label>Belém Pátio</label>
+          <label>MBP</label>
+        </div>
+        
+        <div class="tr">
+          <label>Campinas</label>
+          <label>MCM</label>
+        </div>
+        
+        <div class="tr">
+          <label>Castanhal</label>
+          <label>MCT</label>
+        </div>
+        
+        <div class="tr">
+          <label>Guarulhos</label>
+          <label>MGU</label>
+        </div>
+        
+        <div class="tr">
+          <label>Franca</label>
+          <label>FRC</label>
+        </div>
+        
+        <div class="tr">
+          <label>Ipatinga</label>
+          <label>IP2</label>
+        </div>
+        
+        <div class="tr">
+          <label>Itaquaquecetuba</label>
+          <label>MIT</label>
+        </div>
+        
+        <div class="tr">
+          <label>Jaú</label>
+          <label>JAU</label>
+        </div>
+        
+        <div class="tr">
+          <label>Jundiaí</label>
+          <label>JU2</label>
+        </div>
+        
+        <div class="tr">
+          <label>Marabá</label>
+          <label>MMB</label>
+        </div>
+        
+        <div class="tr">
+          <label>Macapá</label>
+          <label>MMA</label>
+        </div>
+        
+        <div class="tr">
+          <label>Natal</label>
+          <label>MNT</label>
+        </div>
+
+        <div class="tr">
+          <label>Presidente Prudente</label>
+          <label>MPR</label>
+        </div>
+
+        <div class="tr">
+          <label>São Luís</label>
+          <label>MSL</label>
+        </div>
+
+        <div class="tr">
+          <label>São Paulo Boa Vista</label>
+          <label>BOA</label>
+        </div>
+
+        <div class="tr">
+          <label>São Paulo Penha</label>
+          <label>PEN</label>
+        </div>
+
+        <div class="tr">
+          <label>Santa Bárbara D'Oeste</label>
+          <label>SAN</label>
+        </div>
+
+        <div class="tr">
+          <label>Taubaté</label>
+          <label>TAU</label>
+        </div>
+
+        <div class="tr">
+          <label>Vitória da Conquista</label>
+          <label>MVT</label>
+        </div>
+        
+      </div>
+    </div>
     </section>
 
     <div class="clearAll"></div>
